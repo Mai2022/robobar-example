@@ -10,7 +10,10 @@
   "scripts": {
     "test": "karma start",
     "start": "lite-server",
-    "stryker": "stryker run"
+    "stryker": "stryker run",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:ci": "cypress run --reporter junit --reporter-options 'mochaFile=results/test-output-[hash].xml'"
   },
   "keywords": [],
   "author": "",
@@ -28,11 +31,15 @@
     "@stryker-mutator/karma-runner": "^5.0.0",
     "angular-mocks": "^1.8.2",
     "cypress": "^9.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "jasmine-core": "^3.7.1",
     "karma": "^6.3.2",
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage": "^2.0.3",
     "karma-jasmine": "^4.0.1",
     "lite-server": "^2.6.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }
