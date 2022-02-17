@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    //Add ansicolor for a better view
+    options{
+    ansiColor('xterm')
+    }
     stages {
         stage('Open') {
             steps {
