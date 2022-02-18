@@ -37,7 +37,6 @@ function Age() {
     return cy.get('#ageInput')
 }
 
-
 describe('Hello Cypress', () => {
     it('Says hello', () => {
         expect(true).to.equal(true)
